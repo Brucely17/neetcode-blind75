@@ -2,8 +2,8 @@ s = "applepenapple"
 wordDict = ["apple","pen"]
 s = "leetcode"
 wordDict = ["leet","code"]
-# s = "catsandog"
-# wordDict = ["cats","dog","sand","and","cat"]
+s = "catsandog"
+wordDict = ["cats","dog","sand","and","cat"]
 # count=0
 
 # s='a'
@@ -64,7 +64,12 @@ wordDict = ["leet","code"]
 # #     if j==len(s)-1:
 # #             break    
 # # print(wordDict,count,index)
+
+# to keep account of substrng that can be segmented in word dict ,kie if only ' r '-false ,but if substring 'rs' -True
 dp = [False] * (len(s) + 1)
+
+
+# as empty string can alway be segmented ,its initialised as true
 dp[0] = True
 
 # Iterate through the string
